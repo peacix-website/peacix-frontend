@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 30 20% 98%;
+  --foreground: 20 25% 14%;
+  --card: 0 0% 100%;
+  --card-foreground: 20 25% 14%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 20 25% 14%;
+  --primary: 11 62% 75%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 260 30% 74%;
+  --secondary-foreground: 260 30% 40%;
+  --muted: 30 20% 96%;
+  --muted-foreground: 25 10% 40%;
+  --accent: 151 24% 69%;
+  --accent-foreground: 151 24% 35%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 0 0% 98%;
+  --border: 24 10% 90%;
+  --input: 24 10% 90%;
+  --ring: 11 62% 75%;
+  --radius: 0.75rem;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-[#FAFAF9] text-stone-800 font-body;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
+  }
+}
+
+@layer base {
+  [data-debug-wrapper="true"] {
+    display: contents !important;
+  }
+  [data-debug-wrapper="true"] > * {
+    margin-left: inherit;
+    margin-right: inherit;
+    margin-top: inherit;
+    margin-bottom: inherit;
+    padding-left: inherit;
+    padding-right: inherit;
+    padding-top: inherit;
+    padding-bottom: inherit;
+    column-gap: inherit;
+    row-gap: inherit;
+    gap: inherit;
+    border-left-width: inherit;
+    border-right-width: inherit;
+    border-top-width: inherit;
+    border-bottom-width: inherit;
+    border-left-style: inherit;
+    border-right-style: inherit;
+    border-top-style: inherit;
+    border-bottom-style: inherit;
+    border-left-color: inherit;
+    border-right-color: inherit;
+    border-top-color: inherit;
+    border-bottom-color: inherit;
+  }
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #F9EAE7;
+}
+::-webkit-scrollbar-thumb {
+  background: #E8A598;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #D4786A;
+}
+
+/* Selection color */
+::selection {
+  background: #F5D5CE;
+  color: #292524;
+}
